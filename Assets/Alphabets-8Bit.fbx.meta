@@ -558,22 +558,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Coin_Black_mat
-    second: {fileID: 2100000, guid: cf9f573a63790db44b6e9a865f4d396a, type: 2}
+    second: {fileID: 2100000, guid: ad1ed42a3e22e094dbef7b1e36add897, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Coin_Orange_mat
-    second: {fileID: 2100000, guid: ea970e4db405fa84f9cc9e850b35ad3c, type: 2}
+    second: {fileID: 2100000, guid: 9b8a829ff73a5024a9591af7be3b0a44, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Coin_Yellow_mat
-    second: {fileID: 2100000, guid: 22a0c24fe03e17542bfd4e4349dce8a5, type: 2}
+    second: {fileID: 2100000, guid: f9f855d920ccdb34798152ac8c2fc189, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Font_mat
-    second: {fileID: 2100000, guid: f0cba27c17fe98048ad032c7e7eab776, type: 2}
+    second: {fileID: 2100000, guid: 2dd0f76731bb33d459fb2586d2a38be4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
