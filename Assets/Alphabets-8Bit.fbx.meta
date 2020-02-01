@@ -464,6 +464,95 @@ ModelImporter:
     4300172: Symbol_EqualsSign
     4300174: Symbol_AtSign
     4300176: Symbol_Period
+    6400000: Letter_A
+    6400002: Letter_a
+    6400004: Letter_B
+    6400006: Letter_b
+    6400008: Letter_C
+    6400010: Letter_c
+    6400012: Letter_D
+    6400014: Letter_d
+    6400016: Letter_E
+    6400018: Letter_e
+    6400020: Letter_F
+    6400022: Letter_f
+    6400024: Letter_G
+    6400026: Letter_g
+    6400028: Letter_H
+    6400030: Letter_h
+    6400032: Letter_I
+    6400034: Letter_i
+    6400036: Letter_J
+    6400038: Letter_j
+    6400040: Letter_K
+    6400042: Letter_k
+    6400044: Letter_L
+    6400046: Letter_l
+    6400048: Letter_M
+    6400050: Letter_m
+    6400052: Letter_N
+    6400054: Letter_n
+    6400056: Letter_O
+    6400058: Letter_o
+    6400060: Letter_P
+    6400062: Letter_p
+    6400064: Letter_Q
+    6400066: Letter_q
+    6400068: Letter_R
+    6400070: Letter_r
+    6400072: Letter_S
+    6400074: Letter_s
+    6400076: Letter_T
+    6400078: Letter_t
+    6400080: Letter_U
+    6400082: Letter_u
+    6400084: Letter_V
+    6400086: Letter_v
+    6400088: Letter_W
+    6400090: Letter_w
+    6400092: Letter_X
+    6400094: Letter_x
+    6400096: Letter_Y
+    6400098: Letter_y
+    6400100: Letter_Z
+    6400102: Letter_z
+    6400104: Number_0
+    6400106: Number_1
+    6400108: Number_2
+    6400110: Number_3
+    6400112: Number_4
+    6400114: Number_5
+    6400116: Number_6
+    6400118: Number_7
+    6400120: Number_8
+    6400122: Number_9
+    6400124: Symbol_Ampersand
+    6400126: Symbol_Apostrophe
+    6400128: Symbol_AtSign
+    6400130: Symbol_Brackets_Round_Left
+    6400132: Symbol_Brackets_Round_Right
+    6400134: Symbol_Brackets_Squared_Left
+    6400136: Symbol_Brackets_Squared_Right
+    6400138: Symbol_Caret
+    6400140: Symbol_Coin
+    6400142: Symbol_Colon
+    6400144: Symbol_Comma
+    6400146: Symbol_Dash
+    6400148: Symbol_Dash_Lower
+    6400150: Symbol_Dollar
+    6400152: Symbol_EqualsSign
+    6400154: Symbol_ExclamationMark
+    6400156: Symbol_Hash
+    6400158: Symbol_Minus
+    6400160: Symbol_Multi
+    6400162: Symbol_Percent
+    6400164: Symbol_Period
+    6400166: Symbol_Plus
+    6400168: Symbol_QuestionMark
+    6400170: Symbol_QuotationMarks
+    6400172: Symbol_Semicolon
+    6400174: Symbol_Slash
+    6400176: Symbol_Tilde
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -497,7 +586,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
