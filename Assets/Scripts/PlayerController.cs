@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         playerRb = this.GetComponent<Rigidbody>();
         groundCheck = transform.GetChild(0);
     }
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         string levelName = SceneManager.GetActiveScene().name;
 
-        if(levelName != "Level0" && StateManager.Instance.State != StateManager.States.Play)
+        if(levelName != "Level 0" && StateManager.Instance.State != StateManager.States.Play)
         {
             return;
         }

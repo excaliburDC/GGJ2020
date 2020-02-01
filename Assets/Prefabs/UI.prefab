@@ -328,7 +328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your Computer will restart in 03:00 minutes.
+  m_Text: Your Computer will restart in 05:00 minutes.
 --- !u!114 &5694109604389847509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba8536348f4f5446b875ec9ce92d2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 180.5
+  timeLeft: 300.5
   beginText: 'Your Computer will restart in '
 --- !u!1 &5694109605138331093
 GameObject:
