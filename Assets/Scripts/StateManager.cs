@@ -41,20 +41,16 @@ public class StateManager : MonoBehaviour
             case States.None:
                 break;
             case States.Create:
-                timerRunning = true;
-                executeBtn.interactable = true;
-                executeBtn.GetComponentInChildren<Text>().text = "Execute!";
+                CreateGame();
                 break;
             case States.Play:
-                executeBtn.interactable = false;
-                executeBtn.GetComponentInChildren<Text>().text = "Compiling!";
-                player.GetComponent<PlayerController>().ActivatePlayer();
+                PlayGame();
                 break;
             case States.Win:
-                Debug.Log("Correct");
+                WinGame();
                 break;
             case States.Fail:
-                Debug.Log("Incorrect");
+                FailGame();
                 break;
         }
     }
@@ -67,21 +63,27 @@ public class StateManager : MonoBehaviour
 
     private void CreateGame()
     {
-
+        timerRunning = true;
+        executeBtn.interactable = true;
+        executeBtn.GetComponentInChildren<Text>().text = "Execute!";
     }
 
     private void PlayGame()
     {
-
+        executeBtn.interactable = false;
+        executeBtn.GetComponentInChildren<Text>().text = "Compiling!";
+        player.GetComponent<PlayerController>().ActivatePlayer();
     }
 
     private void WinGame()
     {
-
+        timerRunning = false;
+        Debug.Log("Correct");
     }
 
     private void FailGame()
     {
-
+        timerRunning = false;
+        Debug.Log("Incorrect");
     }
 }

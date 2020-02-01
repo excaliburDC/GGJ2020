@@ -18,11 +18,23 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = true;
     public Transform groundCheck;
 
+    private string levelName;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //gameObject.SetActive(false);
+        levelName = SceneManager.GetActiveScene().name;
+        Debug.Log(levelName);
+        if (levelName.Equals("Level 0"))
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+
         playerRb = this.GetComponent<Rigidbody>();
         groundCheck = transform.GetChild(0);
     }
@@ -30,9 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string levelName = SceneManager.GetActiveScene().name;
-
-        if(levelName != "Level 0" && StateManager.Instance.State != StateManager.States.Play)
+        if (!levelName.Equals("Level 0") && StateManager.Instance.State != StateManager.States.Play)
         {
             return;
         }
@@ -69,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (StateManager.Instance.State != StateManager.States.Play)
+        if (!levelName.Equals("Level 0") && StateManager.Instance.State != StateManager.States.Play)
         {
             return;
         }

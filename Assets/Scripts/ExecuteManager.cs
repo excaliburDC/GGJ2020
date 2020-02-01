@@ -32,6 +32,7 @@ public class ExecuteManager : MonoBehaviour
         // End game if timeout.
         if (StateManager.Instance.timeOut)
         {
+            Debug.Log("Timeout");
             if (IsAnswerCorrect())
             {
                 StateManager.Instance.State = StateManager.States.Win;
@@ -43,7 +44,7 @@ public class ExecuteManager : MonoBehaviour
         }
 
         // End game if all characters collected.
-        if (correctAnswer.Length == userAnswer.Length)
+        else if (correctAnswer.Length == userAnswer.Length)
         {
             // Check if correct
             if (IsAnswerCorrect())
@@ -65,6 +66,11 @@ public class ExecuteManager : MonoBehaviour
 
     private bool IsAnswerCorrect()
     {
+        Debug.Log("Correct Check?");
+        if (userAnswer == null)
+        {
+            return false;
+        }
         return correctAnswer.ToUpper().Equals(userAnswer.ToUpper());
     }
 }

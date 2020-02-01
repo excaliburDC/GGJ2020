@@ -34,8 +34,10 @@ public class Timer : MonoBehaviour
             //timerText.text = timeLeft.ToString("0");
             if (timeLeft < 0f)
             {
+                Debug.Log("Time Over");
                 StateManager.Instance.timeOut = true;
                 StateManager.Instance.timerRunning = false;
+                ExecuteManager.Instance.CheckAnswer();
             }
         }
     }
