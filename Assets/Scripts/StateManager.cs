@@ -9,12 +9,16 @@ public class StateManager : MonoBehaviour
     private static StateManager _instance;
     public static StateManager Instance { get => _instance; set => _instance = value; }
 
-    public enum States { None, Create, Play }
+    public enum States { None, Create, Play, Win, Fail }
 
     private States state;
     public States State { get => state; set => state = value; }
 
     public Button executeBtn;
+    public GameObject player;
+
+    [HideInInspector] public bool timeOut = false;
+    [HideInInspector] public bool timerRunning = false;
 
     private void Awake()
     {
@@ -31,15 +35,27 @@ public class StateManager : MonoBehaviour
 
     private void Update()
     {
-        if (State == States.Create)
+
+        switch (state)
         {
-            executeBtn.interactable = true;
-            executeBtn.GetComponentInChildren<Text>().text = "Execute!";
-        }
-        else
-        {
-            executeBtn.interactable = false;
-            executeBtn.GetComponentInChildren<Text>().text = "Compiling!";
+            case States.None:
+                break;
+            case States.Create:
+                timerRunning = true;
+                executeBtn.interactable = true;
+                executeBtn.GetComponentInChildren<Text>().text = "Execute!";
+                break;
+            case States.Play:
+                executeBtn.interactable = false;
+                executeBtn.GetComponentInChildren<Text>().text = "Compiling!";
+                player.GetComponent<PlayerController>().ActivatePlayer();
+                break;
+            case States.Win:
+                Debug.Log("Correct");
+                break;
+            case States.Fail:
+                Debug.Log("Incorrect");
+                break;
         }
     }
 
@@ -47,5 +63,25 @@ public class StateManager : MonoBehaviour
     {
         State = (States)state;
         Debug.Log(State);
+    }
+
+    private void CreateGame()
+    {
+
+    }
+
+    private void PlayGame()
+    {
+
+    }
+
+    private void WinGame()
+    {
+
+    }
+
+    private void FailGame()
+    {
+
     }
 }
