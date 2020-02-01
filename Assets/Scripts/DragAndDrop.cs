@@ -60,8 +60,8 @@ public class DragAndDrop : MonoBehaviour
 
             if (!dragging && Physics.Raycast(ray, out hit, Mathf.Infinity, alphabetMask))
             {
-                Debug.Log("Hit an alphabet platform.");
-                Debug.Log(hit.transform.gameObject.name);
+                //Debug.Log("Hit an alphabet platform.");
+                //Debug.Log(hit.transform.gameObject.name);
                 dragObject = hit.transform.gameObject;
                 dragging = true;
 
