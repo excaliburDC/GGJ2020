@@ -62,6 +62,8 @@ public class ExecuteManager : MonoBehaviour
     {
         userAnswer += alpha.Trim();
         answerText.text += alpha.Trim().ToUpper();
+
+        ExecuteManager.Instance.CheckAnswer();
     }
 
     private bool IsAnswerCorrect()
