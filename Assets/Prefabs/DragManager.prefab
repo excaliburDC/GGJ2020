@@ -43,9 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f210f403d88ad294ebe3d0cf2d6a064d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clampCorrection: 1
   alphabetMask:
     serializedVersion: 2
     m_Bits: 1024
   rotationSpeed: 40
   tempColor: {r: 1, g: 0, b: 0, a: 0}
   newColor: {r: 0, g: 1, b: 0.956378, a: 0}
+  clickParticle: {fileID: 0}

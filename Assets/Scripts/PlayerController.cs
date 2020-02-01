@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -29,7 +30,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (StateManager.Instance.State != StateManager.States.Play)
+        string levelName = SceneManager.GetActiveScene().name;
+
+        if(levelName != "Level0" && StateManager.Instance.State != StateManager.States.Play)
         {
             return;
         }
@@ -80,13 +83,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Pickup")
+        if (other.gameObject.tag == "Pickup")
         {
             ExecuteManager.Instance.AddToAnswer(other.gameObject.name);
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             // Kill the player
             // Trigger end screen

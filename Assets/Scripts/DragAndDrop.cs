@@ -19,6 +19,8 @@ public class DragAndDrop : MonoBehaviour
     public Color tempColor;
     public Color newColor;
 
+    public ParticleSystem clickParticle;
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -31,8 +33,6 @@ public class DragAndDrop : MonoBehaviour
         maxX = topCorner.x;
         minY = bottomCorner.y;
         maxY = topCorner.y;
-
-
     }
 
     private void Update()
@@ -52,7 +52,10 @@ public class DragAndDrop : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = mainCamera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
+
+            Vector3 clickPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z);
+
+            Ray ray = mainCamera.ScreenPointToRay(clickPos);
             RaycastHit hit;
 
             if (!dragging && Physics.Raycast(ray, out hit, Mathf.Infinity, alphabetMask))
@@ -68,6 +71,9 @@ public class DragAndDrop : MonoBehaviour
                 dragObject.GetComponent<Renderer>().material = tempMaterial;
 
                 dragObject.GetComponent<MeshCollider>().isTrigger = true;
+
+                clickParticle.transform.position = mainCamera.ScreenToWorldPoint(clickPos);
+                clickParticle.Play();
             }
         }
 
@@ -82,6 +88,8 @@ public class DragAndDrop : MonoBehaviour
                 newPos.z = 0f;
 
                 dragObject.transform.position = newPos;
+
+                clickParticle.transform.position = newPos;
             }
 
             if (Input.GetKey(KeyCode.Q))
@@ -98,6 +106,7 @@ public class DragAndDrop : MonoBehaviour
                 Vector3 newRot = dragObject.transform.localRotation.eulerAngles;
                 newRot.z += rotationSpeed * Time.deltaTime;
                 dragObject.transform.localRotation = Quaternion.Euler(newRot);
+
             }
         }
 
@@ -109,6 +118,8 @@ public class DragAndDrop : MonoBehaviour
             dragObject.GetComponent<Renderer>().material = tempMaterial;
 
             dragObject.GetComponent<MeshCollider>().isTrigger = false;
+
+            clickParticle.Stop();
         }
     }
 
