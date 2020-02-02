@@ -37,14 +37,13 @@ public class DragAndDrop : MonoBehaviour
 
     private void Update()
     {
-        if (StateManager.Instance.State == StateManager.States.Create)
+        if (StateManager.Instance.mode == StateManager.Modes.Hardcore && StateManager.Instance.state == StateManager.States.Create)
         {
             CreateState();
         }
-
-        if (StateManager.Instance.State == StateManager.States.Create)
+        else if(StateManager.Instance.mode == StateManager.Modes.Normal)
         {
-            PlayState();
+            CreateState();
         }
     }
 
@@ -121,10 +120,5 @@ public class DragAndDrop : MonoBehaviour
 
             clickParticle.Stop();
         }
-    }
-
-    void PlayState()
-    {
-
     }
 }

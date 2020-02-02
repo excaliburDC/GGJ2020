@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!levelName.Equals("NLevel 0") && StateManager.Instance.State != StateManager.States.Play)
+        if (!levelName.Equals("NLevel 0") && StateManager.Instance.state != StateManager.States.Play)
         {
             return;
         }
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!levelName.Equals("NLevel 0") && StateManager.Instance.State != StateManager.States.Play)
+        if (!levelName.Equals("NLevel 0") && StateManager.Instance.state != StateManager.States.Play)
         {
             return;
         }

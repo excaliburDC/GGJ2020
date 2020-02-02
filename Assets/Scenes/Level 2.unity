@@ -2036,6 +2036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec1f81605b118f40b13c170b7f397fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  mode: 0
   executeBtn: {fileID: 1082937363}
   player: {fileID: 1718282185}
   timeOut: 0
@@ -5059,12 +5061,12 @@ PrefabInstance:
     - target: {fileID: 4395218967219506240, guid: ef995da9f233ea347b0be19abc4c9c04,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.842
+      value: -8.43
       objectReference: {fileID: 0}
     - target: {fileID: 4395218967219506240, guid: ef995da9f233ea347b0be19abc4c9c04,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.778
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 4395218967219506240, guid: ef995da9f233ea347b0be19abc4c9c04,
         type: 3}

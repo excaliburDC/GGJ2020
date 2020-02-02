@@ -35,11 +35,11 @@ public class ExecuteManager : MonoBehaviour
             Debug.Log("Timeout");
             if (IsAnswerCorrect())
             {
-                StateManager.Instance.State = StateManager.States.Win;
+                StateManager.Instance.state = StateManager.States.Win;
             }
             else
             {
-                StateManager.Instance.State = StateManager.States.Fail;
+                StateManager.Instance.state = StateManager.States.Fail;
             }
         }
 
@@ -49,11 +49,11 @@ public class ExecuteManager : MonoBehaviour
             // Check if correct
             if (IsAnswerCorrect())
             {
-                StateManager.Instance.State = StateManager.States.Win;
+                StateManager.Instance.state = StateManager.States.Win;
             }
             else
             {
-                StateManager.Instance.State = StateManager.States.Fail;
+                StateManager.Instance.state = StateManager.States.Fail;
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StateManager : MonoBehaviour
@@ -10,9 +11,10 @@ public class StateManager : MonoBehaviour
     public static StateManager Instance { get => _instance; set => _instance = value; }
 
     public enum States { None, Create, Play, Win, Fail }
+    public States state;
 
-    private States state;
-    public States State { get => state; set => state = value; }
+    public enum Modes { Normal, Hardcore }
+    public Modes mode = Modes.Normal;
 
     public Button executeBtn;
     public GameObject player;
@@ -30,7 +32,7 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
-        State = States.Create;
+        state = States.Create;
     }
 
     private void Update()
@@ -57,8 +59,7 @@ public class StateManager : MonoBehaviour
 
     public void ChangeState(int state)
     {
-        State = (States)state;
-        Debug.Log(State);
+        this.state = (States)state;
     }
 
     private void CreateGame()
@@ -77,13 +78,17 @@ public class StateManager : MonoBehaviour
 
     private void WinGame()
     {
-        timerRunning = false;
         Debug.Log("Correct");
+        timerRunning = false;
+        PersistManager.Instance.status = PersistManager.GameStatus.Win;
+        SceneManager.LoadSceneAsync("EndGameMenus");
     }
 
     private void FailGame()
     {
-        timerRunning = false;
         Debug.Log("Incorrect");
+        timerRunning = false;
+        PersistManager.Instance.status = PersistManager.GameStatus.Fail;
+        SceneManager.LoadSceneAsync("EndGameMenus");
     }
 }
