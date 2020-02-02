@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.45117134, g: 0.49983287, b: 0.5678736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -517,7 +517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628061386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 675161751}
@@ -793,7 +793,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.3788391, b: 0.7647059, a: 0}
+  m_BackGroundColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7a86334a8b99a4c8ada2cd82220aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1132562770
+--- !u!1 &1130540478
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -859,8 +859,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1132562772}
-  - component: {fileID: 1132562771}
+  - component: {fileID: 1130540480}
+  - component: {fileID: 1130540479}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -868,13 +868,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &1132562771
+--- !u!108 &1130540479
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132562770}
+  m_GameObject: {fileID: 1130540478}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
@@ -906,13 +906,13 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1132562772
+--- !u!4 &1130540480
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132562770}
+  m_GameObject: {fileID: 1130540478}
   m_LocalRotation: {x: 0.25520188, y: -0.20452398, z: -0.12859586, w: 0.9362185}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -11614,20 +11614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8240209950356914142, guid: b1b6a96aa7ce8f5429813a498c5aa4ce,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8240209950568127988, guid: b1b6a96aa7ce8f5429813a498c5aa4ce,
         type: 3}
       propertyPath: m_Name
       value: Base Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 8240209950568127988, guid: b1b6a96aa7ce8f5429813a498c5aa4ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8240209950568127989, guid: b1b6a96aa7ce8f5429813a498c5aa4ce,
         type: 3}
