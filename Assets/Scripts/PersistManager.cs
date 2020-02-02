@@ -25,7 +25,7 @@ public class PersistManager : MonoBehaviour
 
     public GameStatus status;
     public int currentLevelIndex;
-
+    public StateManager.Modes mode;
     private bool videoStarted = false;
 
     private void Update()

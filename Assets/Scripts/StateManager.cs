@@ -33,6 +33,7 @@ public class StateManager : MonoBehaviour
     private void Start()
     {
         state = States.Create;
+        mode = PersistManager.Instance.mode;
     }
 
     private void Update()
