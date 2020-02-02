@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpHeight: 2.5
+  jumpHeight: 2
   gravity: -11
   groundDist: 0.2
   ground:
@@ -133,6 +133,8 @@ MonoBehaviour:
   input: {x: 0, y: 0, z: 0}
   isGrounded: 1
   groundCheck: {fileID: 0}
+  jumpSound: {fileID: 0}
+  collectSound: {fileID: 0}
 --- !u!1 &4395218967545583380
 GameObject:
   m_ObjectHideFlags: 0

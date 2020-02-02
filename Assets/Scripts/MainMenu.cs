@@ -13,17 +13,17 @@ public class MainMenu : MonoBehaviour
     public GameObject ControlsPanel;
     public GameObject LoadGamePanel;
     public GameObject LoadingPanel;
-   
+
     public Text EditableText;
     public GameObject Monitor;
-  
-  
+
+
     // Use this for initialization
     void Start()
     {
-     
-        EditableText.text = "Welcome To "+" DOT.EXE ";
-        anim = GetComponent<Animator>();      
+
+        EditableText.text = "Welcome To " + " DOT.EXE ";
+        anim = GetComponent<Animator>();
     }
 
     #region Open Different panels
@@ -53,13 +53,13 @@ public class MainMenu : MonoBehaviour
         EditableText.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         LoadingPanel.SetActive(true);
-       
+
         yield return new WaitForSeconds(5f);
         LoadingPanel.SetActive(false);
         SceneManager.LoadScene("Level 0");
-       
+
     }
-    public void openStartGameOptions()
+    public void openStartGameOptions(int mode)
     {
         //enable respective panel
         MainOptionsPanel.SetActive(false);
@@ -67,14 +67,14 @@ public class MainMenu : MonoBehaviour
         //play anim for opening main options panel
         anim.Play("buttonTweenAnims_on");
 
-       
+        PersistManager.Instance.mode = (StateManager.Modes)mode;
 
         //to display the loading screen
         StartCoroutine(LoadingScreen());
 
         //play click sfx
         playClickSound();
-      
+
     }
 
     public void openOptions_Game()
@@ -85,7 +85,7 @@ public class MainMenu : MonoBehaviour
         //enable respective panel
         GamePanel.SetActive(true);
         ControlsPanel.SetActive(false);
-     
+
         LoadGamePanel.SetActive(false);
 
         //play anim for opening game options panel
@@ -103,7 +103,7 @@ public class MainMenu : MonoBehaviour
         //enable respective panel
         GamePanel.SetActive(false);
         ControlsPanel.SetActive(true);
-       
+
         LoadGamePanel.SetActive(false);
 
         //play anim for opening game options panel
@@ -154,7 +154,7 @@ public class MainMenu : MonoBehaviour
 
     void playClickSound()
     {
-       
+
     }
     #endregion
 }
