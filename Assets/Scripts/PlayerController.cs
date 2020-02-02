@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public Vector3 input;
     public bool isGrounded = true;
     public Transform groundCheck;
+    public AudioSource jumpSound;
+    public AudioSource collectSound;
+
 
     private string levelName;
 
@@ -63,7 +66,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             playerRb.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * gravity), ForceMode.VelocityChange);
-
+            jumpSound.Play();
             //play jump sound
         }
 
@@ -96,6 +99,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Pickup")
         {
             ExecuteManager.Instance.AddToAnswer(other.gameObject.name);
+            collectSound.Play();
             Destroy(other.gameObject);
         }
     }
