@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Crash.unity
     guid: 1c1c35270e05e3a41a2198133c036f49
   - enabled: 1
+    path: Assets/Scenes/EndGameMenus.unity
+    guid: 813422a7244e5e6489e1a7a7d9947b72
+  - enabled: 1
+    path: Assets/Scenes/FinishGame.unity
+    guid: 5bdf6d3692036e84bba4b5060d8af005
+  - enabled: 1
     path: Assets/Scenes/Level 0.unity
     guid: 8ac337177c1ae2c4c8da7cec1d48fdaa
   - enabled: 1

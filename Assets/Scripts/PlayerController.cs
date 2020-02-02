@@ -111,5 +111,10 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             StateManager.Instance.state = StateManager.States.Fail;
         }
+
+        if(other.gameObject.tag == "Reset")
+        {
+            SceneManager.LoadSceneAsync("Menu");
+        }
     }
 }

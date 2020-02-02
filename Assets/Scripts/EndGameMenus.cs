@@ -12,8 +12,8 @@ public class EndGameMenus : MonoBehaviour
     public GameObject nextButton;
 
     public Image fadeInPanel;
-    public AudioSource GameoverM;
-    public AudioSource LevelCompleteM;
+    public AudioSource gameoverM;
+    public AudioSource levelCompleteM;
     private void Update()
     {
         fadeInPanel.enabled = true;
@@ -38,15 +38,12 @@ public class EndGameMenus : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         if (PersistManager.Instance.status == PersistManager.GameStatus.Win)
         {
-   
-
-
-            LevelCompleteM.Play();
+            levelCompleteM.Play();
             SuccessScreen();
         }
         else if (PersistManager.Instance.status == PersistManager.GameStatus.Fail)
         {
-            GameoverM.Play();
+            gameoverM.Play();
             GameOverScreen();
         }
     }
@@ -54,18 +51,17 @@ public class EndGameMenus : MonoBehaviour
     public void SuccessScreen()
     {
    
-        successScreen.SetActive(true);
+        successScreen.SetActive(false);
         gameOverScreen.SetActive(false);
 
         if (SceneManager.GetSceneByBuildIndex(SceneManager.sceneCountInBuildSettings - 1) == SceneManager.GetSceneByBuildIndex(PersistManager.Instance.currentLevelIndex))
         {
-            nextButton.SetActive(false);
+            SceneManager.LoadSceneAsync("FinishGame");
         }
     }
 
     public void GameOverScreen()
     {
-       
         successScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }

@@ -2534,7 +2534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &570811573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,6 +2549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 1
   currentLevelIndex: 0
+  mode: 0
 --- !u!4 &570811574
 Transform:
   m_ObjectHideFlags: 0
