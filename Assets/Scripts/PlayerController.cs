@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         levelName = SceneManager.GetActiveScene().name;
         Debug.Log(levelName);
-        if (levelName.Equals("NLevel 0"))
+        if (levelName.Equals("Level 0"))
         {
             gameObject.SetActive(true);
         }
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!levelName.Equals("NLevel 0") && StateManager.Instance.state != StateManager.States.Play)
+        if (!levelName.Equals("Level 0") && StateManager.Instance.state != StateManager.States.Play)
         {
             return;
         }
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!levelName.Equals("NLevel 0") && StateManager.Instance.state != StateManager.States.Play)
+        if (!levelName.Equals("Level 0") && StateManager.Instance.state != StateManager.States.Play)
         {
             return;
         }
@@ -98,11 +98,14 @@ public class PlayerController : MonoBehaviour
             ExecuteManager.Instance.AddToAnswer(other.gameObject.name);
             Destroy(other.gameObject);
         }
+    }
 
+    private void OnCollisionEnter(Collision other)
+    {
         if (other.gameObject.tag == "Enemy")
         {
-            // Kill the player
-            // Trigger end screen
+            Destroy(other.gameObject);
+            StateManager.Instance.state = StateManager.States.Fail;
         }
     }
 }

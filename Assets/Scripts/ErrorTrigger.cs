@@ -12,7 +12,7 @@ public class ErrorTrigger : MonoBehaviour
 
             //transition to level 1, show crash UI
             Debug.Log("Trigger Fired");
-            SceneManager.LoadSceneAsync("Level 1");
+            SceneManager.LoadSceneAsync("Crash");
         }
     }
 }

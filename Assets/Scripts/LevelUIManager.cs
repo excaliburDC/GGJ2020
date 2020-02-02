@@ -8,6 +8,7 @@ public class LevelUIManager : MonoBehaviour
 {
     public GameObject menuPanel;
     public Image fadeInPanel;
+    public GameObject hintPanel;
 
     private void Update()
     {
@@ -24,6 +25,17 @@ public class LevelUIManager : MonoBehaviour
     {
         menuPanel.SetActive(false);
         PersistManager.Instance.currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (hintPanel)
+        {
+            StartCoroutine(DisableHints());
+        }
+    }
+
+    IEnumerator DisableHints()
+    {
+        yield return new WaitForSeconds(5.0f);
+        hintPanel.SetActive(false);
     }
 
     public void OpenMenuPanel()

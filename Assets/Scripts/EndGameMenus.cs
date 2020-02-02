@@ -18,7 +18,7 @@ public class EndGameMenus : MonoBehaviour
         fadeInPanel.enabled = true;
         fadeInPanel.color = Color.Lerp(fadeInPanel.color, Color.clear, Time.deltaTime);
 
-        if (fadeInPanel.color == Color.clear)
+        if (fadeInPanel.color.a <= 0.1f)
         {
             fadeInPanel.enabled = false;
         }
@@ -26,12 +26,14 @@ public class EndGameMenus : MonoBehaviour
 
     private void Start()
     {
+        successScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
         StartCoroutine(EnableUI());
     }
 
     IEnumerator EnableUI()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         if (PersistManager.Instance.status == PersistManager.GameStatus.Win)
         {
             SuccessScreen();

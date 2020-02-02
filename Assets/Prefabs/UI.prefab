@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 657857408}
   fadeInPanel: {fileID: 1916762004}
+  hintPanel: {fileID: 0}
 --- !u!1 &5694109604152541982
 GameObject:
   m_ObjectHideFlags: 0
