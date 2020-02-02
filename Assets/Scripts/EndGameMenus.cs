@@ -12,7 +12,8 @@ public class EndGameMenus : MonoBehaviour
     public GameObject nextButton;
 
     public Image fadeInPanel;
-
+    public AudioSource GameoverM;
+    public AudioSource LevelCompleteM;
     private void Update()
     {
         fadeInPanel.enabled = true;
@@ -26,6 +27,7 @@ public class EndGameMenus : MonoBehaviour
 
     private void Start()
     {
+        
         successScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         StartCoroutine(EnableUI());
@@ -36,16 +38,22 @@ public class EndGameMenus : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         if (PersistManager.Instance.status == PersistManager.GameStatus.Win)
         {
+   
+
+
+            LevelCompleteM.Play();
             SuccessScreen();
         }
         else if (PersistManager.Instance.status == PersistManager.GameStatus.Fail)
         {
+            GameoverM.Play();
             GameOverScreen();
         }
     }
 
     public void SuccessScreen()
     {
+   
         successScreen.SetActive(true);
         gameOverScreen.SetActive(false);
 
@@ -57,6 +65,7 @@ public class EndGameMenus : MonoBehaviour
 
     public void GameOverScreen()
     {
+       
         successScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }
