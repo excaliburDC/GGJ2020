@@ -16,12 +16,12 @@ public class MainMenu : MonoBehaviour
    
     public Text EditableText;
     public GameObject Monitor;
-    public AudioSource AudioSrc;
-    
+  
+  
     // Use this for initialization
     void Start()
     {
-        AudioSrc = GetComponent<AudioSource>();
+     
         EditableText.text = "Welcome To "+" DOT.EXE ";
         anim = GetComponent<Animator>();      
     }
@@ -150,14 +150,11 @@ public class MainMenu : MonoBehaviour
     #region Sounds
     public void playHoverClip()
     {
-        //    AudioSrc.clip = Resources.Load<AudioClip>("Click");
-        //    AudioSrc.Play();
     }
 
     void playClickSound()
     {
-        //    AudioSrc.clip = Resources.Load<AudioClip>("Click");
-        //    AudioSrc.Play();
+       
     }
     #endregion
 }
