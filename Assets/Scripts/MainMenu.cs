@@ -46,6 +46,7 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //to add the clip
         EditableText.text = " ";
+
         EditableText.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         LoadingPanel.SetActive(true);
@@ -153,8 +154,6 @@ public class MainMenu : MonoBehaviour
     {
 
     }
-
-
     #endregion
 }
 
