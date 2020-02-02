@@ -44,6 +44,7 @@ public class PersistManager : MonoBehaviour
         videoStarted = true;
         videoPlayer.Play();
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadSceneAsync("Level 1");
+        videoStarted = false;
+        SceneManager.LoadScene("Level 1");
     }
 }
