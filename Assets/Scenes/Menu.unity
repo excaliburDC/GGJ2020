@@ -816,7 +816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7, y: 20}
+  m_AnchoredPosition: {x: 7, y: -20}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &331357907
@@ -2688,18 +2688,18 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HOW TO PLAY:Use A or D to move your player. First create your level by placing
-    the pieces from the error message above. Move the piece using Mouse Clic and drag
-    snd rotate them using Q or E. After you're done then click the execute button
-    to make the player collect the answer to the error message. Once you click execute
-    you can't move your pieces anymore. So, create your level wisely...
+  m_Text: 'HOW TO PLAY: Use A or D to move your player. First create your level by
+    placing the pieces from the error message above. Move the piece using Mouse Click
+    and drag and rotate them using Q or E. After you''re done then click the execute
+    button to make the player collect the answer to the error message. Once you click
+    execute you can''t move your pieces anymore. So, create your level wisely...'
 --- !u!222 &1164156682
 CanvasRenderer:
   m_ObjectHideFlags: 0
