@@ -1,7 +1,10 @@
 # GGJ2020
 
 Team members:
-meghapandichelvam
+Aman Ahuja
+Deeppratim Chakraborty
+Megha Pandichelvam
+Seemanshu Verma
+Sriram Joshi
 
 
-hello hello 
