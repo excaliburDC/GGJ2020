@@ -17,17 +17,44 @@ public class MainMenu : MonoBehaviour
     public Text EditableText;
     public GameObject Monitor;
 
-
+    //Audio
+    public GameObject volOn;
+    public GameObject volOff;
+    public AudioSource bgVol;
+    public bool isActive = true;
     // Use this for initialization
+
     void Start()
     {
-
+        if (isActive)
+        {
+            PlayerPrefs.SetInt("CharacterVal", 1);
+            PlayerPrefs.SetInt("BGVolume", 1);
+            isActive = false;
+        }
         EditableText.text = "Welcome To " + " DOT.EXE ";
         anim = GetComponent<Animator>();
     }
 
     #region Open Different panels
 
+
+    public void volumeOn()
+    {
+        volOn.SetActive(true);
+        volOff.SetActive(false);
+        bgVol.volume = 0f;
+        PlayerPrefs.SetInt("BGVolume", 0);
+
+    }
+    public void volumeOff()
+    {
+        volOn.SetActive(false);
+        volOff.SetActive(true);
+        bgVol.volume = 1f;
+        PlayerPrefs.SetInt("BGVolume", 1);
+
+    }
     public void openOptions()
     {
         //editable text display
