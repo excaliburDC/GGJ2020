@@ -1,6 +1,7 @@
 # GGJ2020
 
-Team members:
+**Team members:**
+
 Aman Ahuja
 
 Deeppratim Chakraborty
